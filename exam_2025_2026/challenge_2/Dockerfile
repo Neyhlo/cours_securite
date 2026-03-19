@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp AS app
+FROM public.ecr.aws/l4b9c1g4/dunglas/frankenphp:1.12.1-php8.5 AS app
 
 COPY ./search.php /app/public
 

@@ -1,0 +1,9 @@
+x-podman:
+  in_pod: false
+
+services:
+  app:
+    build:
+      context: .
+      target: app
+

@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      target: app
+    ports:
+      - 4443:443
+      - 8005:80
+
+  internal:
+    build:
+      context: .
+      target: flag

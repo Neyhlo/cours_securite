@@ -1,4 +1,4 @@
-FROM alpine:3.23 AS builder
+FROM public.ecr.aws/docker/library/alpine:3.23 AS builder
 
 RUN apk add build-base
 
@@ -9,7 +9,7 @@ RUN cc -o ls_cracked_files ls_cracked_files.c
 
 # ------------------------------------------------------------
 
-FROM alpine:3.23 AS app
+FROM public.ecr.aws/docker/library/alpine:3.23 AS app
 
 RUN apk add bash
 RUN addgroup -S user && adduser -S user -G user
